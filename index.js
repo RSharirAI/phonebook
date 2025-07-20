@@ -70,13 +70,13 @@ app.post ('/api/persons', (request, response) => {
         })
     }
 
-    const nameExists = persons.some(person => person.name.toLowerCase() === body.name.toLowerCase())
+    // const nameExists = persons.some(person => person.name.toLowerCase() === body.name.toLowerCase())
 
-    if (nameExists) {
-        return response.status(400).json({
-            error: 'name must be unique'
-        })
-    }
+    // if (nameExists) {
+    //     return response.status(400).json({
+    //         error: 'name must be unique'
+    //     })
+    // }
     
     const person = new Person({
         name: body.name,
